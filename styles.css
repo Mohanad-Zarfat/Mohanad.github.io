@@ -12,20 +12,69 @@ body.dark {
     --card-bg: #1e1e1e;
 }
 
+/* Basic body styling with transition effects */
 body {
     margin: 0;
     padding: 0;
+    /* Fallback background color (will be overlaid by animated gradient) */
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Roboto', sans-serif;
     transition: background-color 0.3s, color 0.3s;
+    position: relative; /* Required for the pseudo-element below */
+    overflow-x: hidden; /* Prevent horizontal scroll from animation */
 }
 
+/* 
+  Animated Gradient Background
+  This pseudo-element covers the entire viewport and creates a moving gradient animation.
+*/
+body.animated-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind all content */
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Keyframes for the animated gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animate the main title's text color for dynamic font color changes */
+h1 {
+    /* This animation changes the text color over time */
+    animation: textColorChange 10s linear infinite;
+}
+
+/* Keyframes for text color animation */
+@keyframes textColorChange {
+    0% { color: #ff7e5f; }
+    33% { color: #feb47b; }
+    66% { color: #86a8e7; }
+    100% { color: #91eae4; }
+}
+
+/* Styling for headings using Montserrat font */
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Header */
+/* Header styling */
 header {
     background-color: var(--background-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -125,7 +174,7 @@ body.dark .pdf-link:hover {
     background-color: #3700b3;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: var(--card-bg);
     padding: 20px 0;
@@ -142,7 +191,6 @@ footer .social-media a {
     header h1 {
         font-size: 2em;
     }
-
     .projects {
         grid-template-columns: 1fr;
     }
