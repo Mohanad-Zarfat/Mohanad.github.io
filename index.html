@@ -9,10 +9,12 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <!-- Header Section -->
-  <header>
+<!-- Add a class to body to indicate animated background -->
+<body class="animated-bg">
+  <!-- Section 1: Introduction -->
+  <section id="intro">
     <div class="container">
+      <!-- The h1 below will have a dynamic text color animation -->
       <h1>Mohanad</h1>
       <div class="social-media">
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -20,49 +22,47 @@
         <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
       </div>
       <p class="summary">
-        Mohanad is a Data Analyst with a passion for turning data into actionable insights.
-        With expertise in statistical analysis, data visualization, and machine learning,
-        he helps businesses make data-driven decisions.
+        Mohanad is a Data Analyst with a passion for turning data into actionable insights. With expertise in statistical analysis, data visualization, and machine learning, he helps businesses make data-driven decisions.
       </p>
       <button id="theme-toggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
       </button>
     </div>
-  </header>
+  </section>
 
-  <!-- Projects Section -->
-  <main>
-    <section class="projects" id="projects">
-      <div class="project">
+  <!-- Section 2: Projects (PDF Files) -->
+  <section id="projects">
+    <div class="container">
+      <article class="project">
         <img src="https://via.placeholder.com/300x200" alt="Project 1">
         <h2>Project Title 1</h2>
         <p class="project-summary">
-          This project demonstrates Mohanad’s ability to analyze complex datasets and create insightful visualizations.
-          It includes detailed reports and interactive dashboards.
+          This project demonstrates Mohanad’s ability to analyze complex datasets and create insightful visualizations. It includes detailed reports and interactive dashboards.
         </p>
         <a href="sample1.pdf" target="_blank" class="pdf-link">View PDF</a>
-      </div>
-      <div class="project">
+      </article>
+      <article class="project">
         <img src="https://via.placeholder.com/300x200" alt="Project 2">
         <h2>Project Title 2</h2>
         <p class="project-summary">
-          In this project, Mohanad applied machine learning algorithms to predict customer behavior accurately.
-          The project features a comprehensive analysis and summary report.
+          In this project, Mohanad applied machine learning algorithms to predict customer behavior accurately. The project features a comprehensive analysis and summary report.
         </p>
         <a href="sample2.pdf" target="_blank" class="pdf-link">View PDF</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="social-media">
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      </article>
     </div>
-    <p>&copy; 2025 Mohanad. All rights reserved.</p>
+  </section>
+
+  <!-- Section 3: Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-media">
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p>&copy; 2025 Mohanad. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
